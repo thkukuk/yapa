@@ -19,9 +19,6 @@ AC_CHECK_LIB(Imlib2,imlib_load_image,IMLIB2_LIBS="-lImlib2",IMLIB2_LIBS="")
 AC_SUBST(IMLIB2_LIBS)
 AC_CHECK_LIB(exif,exif_data_new_from_file,EXIF_LIBS="-lexif",EXIF_LIBS="")
 AC_SUBST(EXIF_LIBS)
-AC_CHECK_LIB(xml2,xmlParseFile,XML2_LIBS="-lxml2",XML2_LIBS="")
-AC_SUBST(XML2_LIBS)
-AM_CONDITIONAL([HAVE_LIBXML2], [test ! -z "$XML2_LIBS"])
 
 AH_VERBATIM([_ZZENABLE_NLS],
 [#ifdef ENABLE_NLS
