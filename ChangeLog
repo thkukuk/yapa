@@ -1,0 +1,180 @@
+2011-06-22  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 1.1.1
+
+	* src/exif.c: Correct calculationof coordinates for OSM.
+
+2011-06-21  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 1.1
+
+	* src/exif.c: Adjust for libexif 0.6.20, add OSM support.
+
+2011-01-26  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/style.c: Remove dead link to yapa homepage
+
+2009-07-23  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/style.c (create_html_index_nr): Fix memory leak.
+
+2009-07-22  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 1.0.1
+
+	* src/Makefile.am: Fix link order.
+	* picfolio2yapa/Makefile.am: Fix link order.
+
+	* release version 1.0
+
+	* src/config.c: Fix memory leaks.
+	* src/directories.c: Likewise.
+	* src/style.c: Likewise.
+	* src/exif.c: Likewise.
+	* src/images.c: Likewise.
+	* src/main.c: Likewise.
+	* src/main.h: Likewise.
+	* src/txtnotes.c: Likewise.
+
+2008-09-08  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/exif.c (callback_exif_entry): Initialize all variables.
+
+2008-06-27  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.9.1
+
+	* src/main.c (go_through_dir): Fix access of yapa/links
+	file in subdirectories.
+
+2008-06-25  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.9
+
+	* src/main.c (go_through_dir): Read and add yapa/links.
+
+	* src/images.c: Add srcdir/dstdir arguments.
+
+	* src/main.h: Add srcdir and dstdir to image_l, adjust
+	prototypes.
+
+	* src/directories.c: Use srcdir and dstdir.
+
+	* src/style.c (create_html_image): calculate relative path
+	for images not in dstdir.
+
+	* src/exif.c (load_exif_data): Use srcdir to find image.
+
+2008-05-25  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/exif.c (callback_exif_entry): Double check if we
+	really got all GPS informations.
+
+2007-09-11  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.8.1
+
+	* picfolio2yapa/picfolio2yapa.c: Check return value of asprintf.
+
+2007-09-10  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.8
+
+	* src/exif.c: Add Lens type and Picture style support.
+
+	* src/main.h: Add yapa_oom prototype.
+	* src/main.c: Add yapa_oom, check return value of all asprintf calls.
+	* src/exif.c: Check return value of all asprintf calls.
+	* src/config.c: Likewise.
+	* src/directories.c: Likewise.
+	* src/htmlfiles.c: Likewise.
+	* src/images.c: Likewise.
+	* src/txtnotes.c: Likewise.
+	* src/style.c: Likewise.
+
+2007-09-04  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.7
+
+	* src/style.c (create_html_frame_start): Fix second argument
+	to window.open() call.
+
+2007-09-03  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/exif.c (load_exif_data): If short and long focal is
+	identical, we have no zoom.
+
+	* src/style.c (create_html_image): Link to index page from
+	which we come.
+	* src/main.h: adjust create_html_image proto type.
+	* src/directories.c: adjust create_html_image call.
+
+2007-08-13  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/style.c (create_html_image): Add direct google map link.
+
+2007-01-04  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.6
+
+	* src/directories.c (sort_dir): Sort directories according to
+	their name.
+
+	* src/images.c (sort_img): Sort images according to their name.
+
+	* src/config.c: Add support for sort_directory and sort_images option.
+
+	* src/main.h: Add sort_dir and sort_img to config_t.
+
+2006-12-20  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* src/exif.c (callback_exif_entry): Fix GPS coordinates output,
+	use maps.google.de instead of maps.google.com.
+
+2006-12-19  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.5
+
+	* src/exif.c (callback_exif_entry): Add GPS coordinates and
+	link to maps.google.com.
+
+2006-11-11  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.4
+
+	* src/directories.c (sort_directories): Save time of last
+	modification for checks in style.c.
+
+	* src/style.c (create_html_index_nr): Regenerate index file if
+	yapa/directories is newer.
+
+	* src/main.h (dir_l): Add directory_mtime field.
+
+	* src/images.c (sort_images): Fix saving of images file, regenerate
+	html files if yapa/images file is newer than html files.
+
+2006-11-04  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.3
+
+	* src/main.h (image_l): Add descr_mtime field.
+
+	* src/images.c (sort_images): Add mtime of text description
+	to image data.
+
+	* src/exif.c (load_exif_data): Only set "have_exif_data" if
+	we really found at least one entry.
+
+	* src/directories.c (update_html): Recreate html page if
+	text description has changed.
+
+2006-10-25  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.2
+
+	* src/directories.c: Don't write config files if not necessary.
+	* src/images.c: Likewise.
+
+2006-10-04  Thorsten Kukuk  <kukuk@thkukuk.de>
+
+	* release version 0.1

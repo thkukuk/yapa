@@ -1,0 +1,57 @@
+yapa NEWS -- history of user-visible changes.
+
+Copyright (C) 2006, 2007, 2008, 2009, 2012 Thorsten Kukuk
+
+Please send bug reports, questions and suggestions to <kukuk@thkukuk.de>.
+
+* Version 1.1.1
+- Fix OpenStreetMap support
+
+* Version 1.1
+- Adjust for libexif-1.6.20
+- Add OpenStreetMap support
+
+* Version 1.0.1
+- Correct order of linking
+
+* Version 1.0
+- Bug fixes in memory handling
+
+* Version 0.9.1
+- Fix access of yapa/links file in sub-directories
+
+* Version 0.9
+- Allow images in other directories than the html files are
+- Fix bug in Exif/GPS handling of some Canon cameras
+
+* Version 0.8.1
+- Build fix for picfolio2yapa
+
+* Version 0.8
+- Display Picture Style and Lens Type
+- Check asprintf return values
+
+* Version 0.7
+- Fix JavaScript Bugs
+- Add direct link to Google Maps if GPS data available
+- Fix links to index pages
+
+* Version 0.6
+- Add support for sort_directory and sort_images options
+
+* Version 0.5
+- Display GPS data and add link to maps.google.com
+
+* Version 0.4
+- Recreate html pages if yapa data files were modified
+- Fix creation of images file
+
+* Version 0.3
+- Recreate html page if description has changed
+- Don't create EXIF window if no EXIF entry was found
+
+* Version 0.2
+- Optimize saving of internal config files
+
+* Version 0.1
+- Initial version
