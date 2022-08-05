@@ -7,4 +7,6 @@ AUTOMAKE_OPTIONS = 1.9 foreign dist-xz check-news
 #
 SUBDIRS = src
 
+EXTRA_DIST = README.md
+
 CLEANFILES = *~
